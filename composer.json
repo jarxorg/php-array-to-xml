@@ -1,0 +1,23 @@
+{
+    "name": "jarxorg/array-to-xml",
+    "description": "Reversible converter for array and dom-xml",
+    "homepage": "https://github.com/jarxorg/php-array-to-xml",
+    "license": "Apache-2.0",
+    "type": "library",
+    "require": {
+        "php": ">=5.3.2",
+        "lib-libxml": "*"
+    },
+    "require-dev": {
+       "phpunit/phpunit" : "@stable",
+       "squizlabs/php_codesniffer": "@stable"
+    },
+    "autoload": {
+        "files": [ "src/ArrayToXml.php" ]
+    },
+    "keywords": [
+        "array",
+        "dom",
+        "xml"
+    ]
+}
