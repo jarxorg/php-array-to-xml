@@ -8,6 +8,21 @@ You can install this package via composer.
 composer require jarxorg/array-to-xml
 ```
 
+## Array Specification
+
+```
+['<ElementName>', <Attributes|Content|Child>,,,]
+
+Attributes:
+   '<AttributeName>' => '<Value>'
+
+Content:
+   '<Content>'
+
+Child:
+   ['<ElementName>', <Attributes|Content|Child>,,,]
+```
+
 ## Examples
 
 ```php
