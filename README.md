@@ -23,7 +23,7 @@ Child:
    ['<ElementName>', <Attributes|Content|Child>,,,]
 ```
 
-## Examples
+## Examples - arrayToXml
 
 ```php
 use Jarxorg\ArrayToXml;
@@ -57,3 +57,34 @@ The above example will output something similar to:
   </body>
 </html>
 ```
+
+## Examples - xmlToArray
+
+```php
+use Jarxorg\ArrayToXml;
+...
+$xml = '<my-best-fruits>
+  <fruit order="1">apple</fruit>
+  <fruit order="2">orange</fruit>
+  <fruit order="3">kiwi</fruit>
+</my-best-fruits>';
+
+$result = ArrayToXml::xmlToArray($xml);
+```
+
+The above example will output something similar to:
+```xml
+[
+    'my-best-fruits',
+    ['fruit', 'order' => '1', 'apple'],
+    ['fruit', 'order' => '2', 'orange'],
+    ['fruit', 'order' => '3', 'kiwi']
+];
+```
+
+## Functions
+
+* `arrayToDom($array, DOMDocument $doc = null)`
+* `arrayToXml($array)`
+* `domToArray(DOMNode $dom)`
+* `xmlToArray($xml)`
